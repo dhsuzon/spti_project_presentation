@@ -1,0 +1,122 @@
+body{
+
+   scroll-behavior: smooth;
+  
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+   
+  
+}
+/* top navbar desgin */
+.top_header_nav{
+    background: #4056A1;
+    color: #fff;
+}
+/* medium navber desgin */
+.medium_header_nav {
+    background: #C0E6F1;
+    color: #fff;
+}
+/* medium navber main title desgin  */
+.spti_site_main_title {
+    font-weight: 700;
+    color: green;
+}
+/* medium navber main subtitle desgin  */
+.spti_sub_site_title{
+    font-family: 'Stylish', sans-serif;
+    color: #ee5253;
+}
+/* toggler nav background adding */
+.toggle_navbar_container{
+    background: #2d489f;
+}
+/* toggler navbar text desgin */
+.nav-text_color {
+    color: #fff !important;
+    font-weight: 400;
+}
+/* toggler navbar dropdown item desgin and hover adding text desgin */
+.dropdown_conainer a:hover,.nav-text_color:hover{
+    text-shadow: 1px 1px #222;
+    background: #D79922;
+}
+/*toggler navbar dropdown item barcground desgin  */
+.dropdown_menu_style{
+    background: #2d489f !important;
+}
+
+/* managing commitee info heading */
+.committee_info_text,.message_info_text{
+  background: #4056A1;
+  color: #fff;
+  border-left: 5px solid #D79922;
+  border-bottom:  2px solid #D79922;
+}
+/* image hover effect adding with  */
+.image-hover_effect:hover{
+    transform: scale(1.2);
+    transition: 0.6s ease;
+}
+/* image overflow  hidden container */
+.image_container {
+    overflow: hidden;
+    transition: 0.6s ease;
+}
+/* usefull links header title  desgin */
+.usefull_link_header,.contact_header_text{
+    background:#4056A1 !important;
+    border-bottom: 5px solid #D79922 !important;
+    
+}
+/* usefull links container li  desgin */
+.usefull_link_container li{
+    border: none;
+
+}
+/* usefull links container li:hover effect adding  desgin */
+.usefull_link_container li:hover{
+    border-bottom: 1px solid #DEE2E6;
+
+}
+/* usefull links a  desgin */
+.usefull_link_container li a{
+    text-decoration: none;
+}
+/* usefull links a:hover effect adding  desgin */
+.usefull_link_container li a:hover{
+    text-decoration: underline;
+}
+/* footer desgin */
+.footer{
+	padding: 10px 0px;
+	background: #4056A1;
+	border-top: 5px solid #D79922;
+	color: #fff;
+}
+/* footer a tag desgin */
+.footer a{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 800;
+}
+.footer a:hover{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 800;
+}
+/* admissiom_ancor desgin   */
+.admissiom_ancor_desgin {
+    text-decoration: none;
+    color: #000;
+}
+/* admissiom_ancor desgin hover   */
+.admissiom_ancor_desgin:hover {
+    text-decoration: underline;
+    
+}
+
