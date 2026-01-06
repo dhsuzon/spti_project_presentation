@@ -12,7 +12,7 @@ if (!isset($_SESSION['admin_user'])) {
 }
 ?>
 
-<?php include __DIR__.'/core/dashboard_header.php'; ?>
+<?php include_once __DIR__.'/core/dashboard_header.php'; ?>
 <?php
 
 
@@ -90,7 +90,12 @@ $student_count = mysqli_num_rows(mysqli_query($conn, "SELECT id FROM students"))
         <?php include_once  __DIR__."/core/tab/author_member_table.php"; ?>
         <?php include_once  __DIR__."/core/tab/department_data_table.php"; ?>
         <?php include_once __DIR__."/core/tab/facilitie_data_table.php"; ?>
+        <?php include_once __DIR__."/core/tab/technology_data_table.php"; ?>
+
+
+
+
+
 
     </div>
-</div>
-<?php include_once __DIR__.'/core/dashboard_footer.php'; ?>
+    <?php include_once __DIR__.'/core/dashboard_footer.php'; ?>

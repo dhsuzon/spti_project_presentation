@@ -19,6 +19,10 @@
         <h4 class="committee_info_text py-1 ps-3">Gallery</h4>
         <!-- gallery image  -->
 
+        <div class="row g-4">
+            <?php include_once __DIR__."/core/tab/gallery_fornted_data.php"; ?>
+        </div>
+
         <!-- campus facility title  -->
         <h4 class="message_info_text pb-2 ps-3 mt-3">Campus Facilities</h4>
         <!-- campus facility logo  -->

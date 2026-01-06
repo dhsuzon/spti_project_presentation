@@ -23,7 +23,7 @@
 
                 <div class="col-sm-6 pt-5">
                     <h3 class=" invisible"> </h3>
-                    <img src="./images/banner_image/spti_banner.png " width="100%"
+                    <img src="./images/banners/banner_1767331561.jpg " width="100%"
                         style="filter: drop-shadow(0 0 0.75rem #aaa);" class=" d-flex mx-auto"
                         alt="this is spti banner image">
                 </div>
@@ -33,39 +33,9 @@
                         কোর্স
                         সমুহ: </h3>
                     <div class="row row-eq-height justify-content-center align-items-center g-2">
-                        <div class="col-12 col-sm-12 col-lg-6 mb-4">
-                            <a href="./civil.php" class="admissiom_ancor_desgin">
-                                <div class="card text-center shadow rounded-0">
-                                    <img class="card-img-top rounded-0" src="./images/department/civil_tecno.png"
-                                        alt="image/poster/civil image.jpg" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Civil Technology</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-12 col-sm-12 col-lg-6 mb-4">
-                            <a href="./electrical.php" class="admissiom_ancor_desgin">
-                                <div class="card text-center shadow rounded-0">
-                                    <img class="card-img-top rounded-0" src="./images/department/electrical_techo.png"
-                                        alt="this electrical image" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Electrical Technology</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-12 col-sm-12 col-lg-6 mb-4">
-                            <a href="./computer.php" class="admissiom_ancor_desgin">
-                                <div class="card text-center shadow rounded-0">
-                                    <img class="card-img-top rounded-0" src="./images/department/computer_tecno.png"
-                                        alt="this is computer image" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">Computer Science & Technology</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+
+
+                        <?php  include_once __DIR__."/core/tab/technology_fornted_data.php";?>
                     </div>
 
 

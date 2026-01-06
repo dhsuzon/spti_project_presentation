@@ -78,7 +78,7 @@ $(document).ready(function () {
   });
 
   //  reset student
-  $("#studentModal").on("hidden.bs.modal", () => {
+  $("#studentModal").on("hidden.bs.modal", function () {
     $(this).find("form").trigger("reset");
     $("#studentModalLabel").text("Add New Student");
     $("#student_id").val("");
@@ -230,5 +230,38 @@ $(document).ready(function () {
     $("#f_header").text("Add Facility");
     $("#f_btn").text("Save Facility");
     $("#facilityModal").modal("show");
+  });
+
+  // add and edit technology card
+  $("#add_tech").on("click", function () {
+    $("#tech_title").text("Add New Technology");
+    $("#sub_tech_btn").text("add new technoloy card");
+
+    $("#tech_id").val("");
+    $("#dept_id").val("");
+    $("#tech_name").val("");
+    $("#prev_img").addClass("d-none");
+    $("#tech_image").prop("required", true);
+  });
+
+  $(document).on("click", ".edit_tech", function () {
+    $("#tech_title").text("Update Technology Card");
+    $("#sub_tech_btn")
+      .text("Update Technology Card")
+      .removeClass("btn-primary")
+      .addClass("btn-info");
+
+    $("#tech_id").val($(this).data("id"));
+    $("#dept_id").val($(this).data("dept"));
+    $("#tech_name").val($(this).data("tech"));
+
+    var imgName = $(this).data("image");
+    if (imgName) {
+      $("#prev_img")
+        .attr("src", "images/technology_image/" + imgName)
+        .removeClass("d-none");
+    }
+
+    $("#tech_image").prop("required", false);
   });
 });

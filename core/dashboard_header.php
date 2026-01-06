@@ -42,7 +42,7 @@
                 <a href="#" class="edit-teacher-btn" data-bs-toggle="modal" data-bs-target="#addTeacherModal"
                     data-id="1" data-name="Teacher Name" data-designation="Sr. Instructor" data-dept="Computer"
                     data-phone="017XXX" data-email="test@mail.com" data-image="teacher.jpg">
-                    <i class="fas fa-edit"></i> Edit Teachers
+                    <i class="fas fa-edit"></i> Edit Teacher
                 </a>
             </li>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#studentModal"><i class="fas fa-user-edit"></i> Edit

@@ -21,5 +21,5 @@ $campus_facilities_result = mysqli_query($conn, $campus_facilities);
 
 <?php else : ?>
 
-<p>not facilites available</p>
+<?php echo "<p>not facilites available</p>"; ?>
 <?php endif ; ?>

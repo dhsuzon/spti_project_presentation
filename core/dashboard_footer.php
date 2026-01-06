@@ -19,20 +19,25 @@
                         <div class="col-md-6 form-group mb-3">
                             <label class="small font-weight-bold text-uppercase text-muted">Full Name</label>
                             <input type="text" name="name" id="t_name" class="form-control shadow-none"
-                                placeholder="Enter teacher name" required>
+                                placeholder="Enter teacher name" maxlength="100" pattern="^[A-Za-z\s\.\:]{5,100}$"
+                                title="name must be A-Z,a-z \s \.\: and length gather than equal 5 and less than equal  100"
+                                required>
                         </div>
 
                         <div class="col-md-6 form-group mb-3">
                             <label class="small font-weight-bold text-uppercase text-muted">Designation</label>
                             <input type="text" name="designation" id="t_designation" class="form-control shadow-none"
-                                placeholder="e.g. Senior Instructor" required>
+                                placeholder="e.g. Senior Instructor" maxlength="100"
+                                pattern="^[a-zA-Z\s\,\-\(\)\.]{2,100}$"
+                                title="length must be  gather than equal 2  and less than equal 100  " required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 form-group mb-3">
                             <label class="small font-weight-bold text-uppercase text-muted">Department</label>
-                            <select name="teacher_department" id="t_dept" class="form-control shadow-none" required>
+                            <select name="teacher_department" id="t_dept" class="form-control shadow-none"
+                                maxlength="100" title="length must be less than equal 100" required>
                                 <option value="" disabled selected>Select Department</option>
                                 <option value="Computer">Computer</option>
                                 <option value="Civil">Civil</option>
@@ -43,8 +48,10 @@
 
                         <div class="col-md-6 form-group mb-3">
                             <label class="small font-weight-bold text-uppercase text-muted">Phone Number</label>
-                            <input type="text" name="phone" id="t_phone" class="form-control shadow-none"
-                                placeholder="017XXXXXXXX" required>
+                            <input type="tel" name="phone" id="t_phone" class="form-control shadow-none" maxlength="15"
+                                pattern="^[0-9]{11,15}$" placeholder="017XXXXXXXX"
+                                title="length must be gather than equal 11 and less than equal 15 only numeric "
+                                required>
                         </div>
                     </div>
 
@@ -52,7 +59,8 @@
                         <div class="col-md-12 form-group mb-3">
                             <label class="small font-weight-bold text-muted">Email Address</label>
                             <input type="email" name="email" id="t_email" class="form-control shadow-none"
-                                placeholder="example@mail.com" required>
+                                placeholder="example@mail.com" maxlength="255"
+                                title="length must be less than  equal 255" required>
                         </div>
                     </div>
 
@@ -63,7 +71,7 @@
                                 <img id="t_img_view" src="" width="60" class="img-thumbnail">
                             </div>
                             <input type="file" name="teacher_image" class="form-control shadow-none" id="teacherImg"
-                                required>
+                                required maxlength="255" title="length must be less than  equal 255" required>
                         </div>
                     </div>
 
@@ -98,7 +106,7 @@
                     <div class="form-group mb-3">
                         <label class="small font-weight-bold text-uppercase text-muted">Notice Title</label>
                         <input type="text" name="notice_title" id="n_title" class="form-control shadow-none"
-                            placeholder="Enter notice title" required>
+                            placeholder="Enter notice title" required maxlength="255">
                     </div>
                     <div class="form-group mb-3">
                         <label class="small font-weight-bold text-uppercase text-muted">Notice Date</label>
@@ -109,7 +117,8 @@
                     <div class="form-group mb-3">
                         <label class="small font-weight-bold text-uppercase text-muted">Notice File / Image
                             (Optional)</label>
-                        <input type="file" name="notice_file" id="n_file" class="form-control shadow-none">
+                        <input type="file" name="notice_file" id="n_file" class="form-control shadow-none"
+                            maxlength="255">
 
                         <div id="file_view_section" class="mt-2" style="display:none;">
                             <small class="text-info"><i class="fas fa-link"></i> Current File: <span
@@ -146,23 +155,27 @@
                         <div class="col-md-12 mb-3">
                             <label class="form-label font-weight-bold">Student Name</label>
                             <input type="text" name="student_name" id="student_name" class="form-control"
-                                placeholder="Enter full name" required>
+                                placeholder="Enter full name" maxlength="100" required>
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label class="form-label font-weight-bold">Roll No</label>
-                            <input type="number" name="roll_no" id="roll_no" class="form-control" placeholder="101102"
-                                required>
+                            <input type="text" name="roll_no" id="roll_no" class="form-control" placeholder="101102"
+                                maxlength="10" required pattern="^[0-9]{4,10}$"
+                                title="must be Roll no numeric length  gather than equal 4 and less than equal 10">
                         </div>
+
                         <div class="col-md-6 mb-3">
                             <label class="form-label font-weight-bold">Registration No</label>
-                            <input type="number" name="reg_no" id="reg_no" class="form-control" placeholder="1502030405"
-                                required>
+                            <input type="tel" name="reg_no" id="reg_no" class="form-control" placeholder="1502030405"
+                                maxlength="16" required pattern="^[0-9]{8,16}$"
+                                title="must be Registation no numeric length  gather than equal 8 and less than equal 16">
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label class="form-label font-weight-bold">Department</label>
-                            <select name="student_department" id="student_department" class="form-select" required>
+                            <select name="student_department" id="student_department" class="form-select" maxlength="50"
+                                required>
                                 <option value="">Select Department</option>
                                 <option value="Computer">Computer</option>
                                 <option value="Civil">Civil</option>
@@ -171,9 +184,10 @@
                                 <option value="Electronics">Electronics</option>
                             </select>
                         </div>
+
                         <div class="col-md-6 mb-3">
                             <label class="form-label font-weight-bold">Semester</label>
-                            <select name="semester" id="semester" class="form-select" required>
+                            <select name="semester" id="semester" class="form-select" maxlenght="20" required>
                                 <option value="1st">1st</option>
                                 <option value="2nd">2nd</option>
                                 <option value="3rd">3rd</option>
@@ -188,11 +202,15 @@
                         <div class="col-md-6 mb-3">
                             <label class="form-label font-weight-bold">Session</label>
                             <input type="text" name="session" id="session" class="form-control" placeholder="2021-22"
-                                required>
+                                maxlength="20" required pattern="^[0-9\-]{4,9}$"
+                                title="must be session  numeric length  gather than equal 4 and less than equal 9 or inclue \-">
                         </div>
+
                         <div class="col-md-6 mb-3">
                             <label class="form-label font-weight-bold">Phone Number</label>
-                            <input type="text" name="phone" id="phone" class="form-control" placeholder="017xxxxxxxx">
+                            <input type="tel" name="phone" id="phone" class="form-control" placeholder="017xxxxxxxx"
+                                maxlength="15 " pattern="^[0-9]{11,15}$"
+                                title="must be phone number n numeric length  gather than equal 11 and less than equal 16">
                         </div>
 
                         <div class="col-md-6 mb-3">
@@ -202,10 +220,12 @@
                                 <option value="inactive">Inactive</option>
                             </select>
                         </div>
+
                         <div class="col-md-6 mb-3">
                             <label class="form-label font-weight-bold">Student Image</label>
-                            <input type="file" name="student_image" class="form-control shadow-sm">
-                            <small class="text-muted">Keep blank if you don't want to change image.</small>
+                            <input type="file" name="student_image" class="form-control shadow-sm" accept="image/*">
+                            <small class="text-muted">Keep blank if you don't want to change image.</small
+                                maxlength="255">
                         </div>
                     </div>
                 </div>
@@ -234,7 +254,8 @@
                     <div class="mb-3">
                         <label class="form-label font-weight-bold">Banner Title</label>
                         <input type="text" name="banner_title" id="banner_title" class="form-control"
-                            placeholder="Enter banner title" required>
+                            placeholder="Enter banner title" maxlength="255" pattern="^.{0,255}$"
+                            title="banner title 0 or less than equal 255">
                     </div>
 
                     <div id="currentImageContainer" class="mb-3 text-center" style="display: none;">
@@ -245,7 +266,8 @@
 
                     <div class="mb-3">
                         <label class="form-label font-weight-bold" id="imageLabel">Select Banner Image</label>
-                        <input type="file" name="banner_image" id="banner_image" class="form-control" accept="image/*">
+                        <input type="file" name="banner_image" id="banner_image" class="form-control" accept="image/*"
+                            maxlength="255" pattern="^.{0,255}$">
                         <small class="text-muted" id="imageHelp">Recommended size: 1920x800 px</small>
                     </div>
                 </div>
@@ -275,7 +297,8 @@
                     <div class="mb-3">
                         <label class="form-label font-weight-bold">Gallery Caption</label>
                         <input type="text" name="gallery_caption" id="gallery_caption" class="form-control"
-                            placeholder="Enter Gallery Caption" required>
+                            placeholder="Enter Gallery Caption" required maxlength="255" pattern="^[A-Za-z,\s]{0,255}$"
+                            title="must be length less than equal 255 and fflow this pattern [A-Za-z,\s]{0,255} ">
                     </div>
 
                     <div id="currentImageContainer_gallery" class="mb-3 text-center" style="display: none;">
@@ -286,8 +309,8 @@
 
                     <div class="mb-3">
                         <label class="form-label font-weight-bold" id="image_Label">Select Gallery Image</label>
-                        <input type="file" name="gallery_image" id="gallery_image" class="form-control"
-                            accept="image/*">
+                        <input type="file" name="gallery_image" id="gallery_image" class="form-control" accept="image/*"
+                            maxlength="255" pattern="^.{1,255}$" title="must be length less than equal 255 ">
                         <small class="text-muted" id="imageHelp_gallery">Recommended size: 1920x800 px</small>
                     </div>
                 </div>
@@ -327,18 +350,20 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label>Full Name</label>
-                            <input type="text" name="name" id="auth_m_name" class="form-control" required>
+                            <input type="text" name="name" id="auth_m_name" class="form-control" required
+                                maxlength="255">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label>Designation</label>
-                            <input type="text" name="designation" id="auth_m_desig" class="form-control">
+                            <input type="text" name="designation" id="auth_m_desig" class="form-control"
+                                maxlength="255">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label>Institution</label>
-                            <input type="text" name="institution" id="auth_m_inst" class="form-control">
+                            <input type="text" name="institution" id="auth_m_inst" class="form-control" maxlength="255">
                         </div>
                     </div>
 
@@ -350,8 +375,8 @@
                     <div class="row align-items-center">
                         <div class="col-md-8">
                             <label>Photo</label>
-                            <input type="file" name="image" id="auth_m_image"
-                                class="form-control-file border w-100 p-1">
+                            <input type="file" name="image" id="auth_m_image" class="form-control-file border w-100 p-1"
+                                maxlength="255">
                         </div>
                         <div class="col-md-4 text-center">
                             <div id="auth_image_preview_container" style="display:none;">
@@ -388,22 +413,27 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Department Name</label>
-                            <input type="text" name="dept_name" id="dept_m_name" class="form-control" required>
+                            <input type="text" name="dept_name" id="dept_m_name" class="form-control" required
+                                maxlength="100">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Head Name</label>
-                            <input type="text" name="head_name" id="dept_m_hname" class="form-control" required>
+                            <input type="text" name="head_name" id="dept_m_hname" class="form-control" required
+                                maxlength="255">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Head Email</label>
-                            <input type="email" name="head_email" id="dept_m_hemail" class="form-control">
+                            <input type="email" name="head_email" id="dept_m_hemail" class="form-control"
+                                maxlength="255">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Head Contact</label>
-                            <input type="text" name="head_contact" id="dept_m_hcontact" class="form-control">
+                            <input type="text" name="head_contact" id="dept_m_hcontact" class="form-control"
+                                maxlength="20" pattern="^[0-9]{11,15}$"
+                                title="contsct muste numeric length gather than qual 11 and less than equall 15">
                         </div>
                     </div>
 
@@ -429,19 +459,19 @@
                     <div class="row">
                         <div class="col-md-3 mb-3">
                             <label class="form-label small">Dept. Icon</label>
-                            <input type="file" name="dept_icon" class="form-control form-control-sm">
+                            <input type="file" name="dept_icon" class="form-control form-control-sm" maxlength="255">
                         </div>
                         <div class="col-md-3 mb-3">
                             <label class="form-label small">Job Icon</label>
-                            <input type="file" name="job_icon" class="form-control form-control-sm">
+                            <input type="file" name="job_icon" class="form-control form-control-sm" maxlength="255">
                         </div>
                         <div class="col-md-3 mb-3">
                             <label class="form-label small">Exam Icon</label>
-                            <input type="file" name="exam_icon" class="form-control form-control-sm">
+                            <input type="file" name="exam_icon" class="form-control form-control-sm" maxlength="255">
                         </div>
                         <div class="col-md-3 mb-3">
                             <label class="form-label small">Head Photo</label>
-                            <input type="file" name="head_image" class="form-control form-control-sm">
+                            <input type="file" name="head_image" class="form-control form-control-sm" maxlength="255">
                         </div>
                     </div>
                 </div>
@@ -469,8 +499,8 @@
                     <input type="hidden" name="id" id="f_id">
 
                     <div class="mb-3">
-                        <label class="form-label">Upload Facilities Icon (PNG/SVG/JPG)</label>
-                        <input type="file" name="icon" class="form-control" id="f_icon">
+                        <label class="form-label">Upload Facilities Icon </label>
+                        <input type="file" name="icon" class="form-control" id="f_icon" maxlength="255">
 
                         <div id="icon_preview_box" class="mt-2" style="display:none;">
                             <img src="" id="old_icon_img" width="50" class="img-thumbnail">
@@ -480,7 +510,7 @@
 
                     <div class="mb-3">
                         <label>Title</label>
-                        <input type="text" name="title" id="f_title" class="form-control" required>
+                        <input type="text" name="title" id="f_title" class="form-control" required maxlength="100">
                     </div>
                     <div class="mb-3">
                         <label>Description</label>
@@ -497,6 +527,55 @@
         </form>
     </div>
 </div>
+
+<!-- techo card modal -->
+<div class="modal fade" id="techModal" tabindex="-1" aria-labelledby="techModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header  text-white" id="modalHeader" style="background: #417690;">
+                <h5 class="modal-title" id="tech_title">Add New Technology</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <form action="./core/admin/course_process.php" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="tech_id" id="tech_id">
+
+                <div class="modal-body">
+                    <div class="mb-3 text-start">
+                        <label class="form-label">Department</label>
+                        <select name="dept_id" id="dept_id" class="form-select" required>
+                            <option value="">-- select department --</option>
+                            <?php
+                            $depts = mysqli_query($conn, "SELECT id, dept_name FROM departments");
+                            while($d = mysqli_fetch_assoc($depts)){
+                                echo "<option value='".$d['id']."'>".$d['dept_name']."</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label class="form-label"> Coures Card Title</label>
+                        <input type="text" name="tech_name" id="tech_name" class="form-control" required
+                            maxlength="100">
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label class="form-label d-block text-start">Course Card Image</label>
+                        <img id="prev_img" src="" width="100" class="img-thumbnail mb-2 d-none">
+                        <input type="file" name="tech_image" id="tech_image" class="form-control" maxlength="255">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" name="save_action" id="sub_tech_btn" class="btn text-white"
+                        style="background: #417690;">Save
+                        Technology Card</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
 
 
 

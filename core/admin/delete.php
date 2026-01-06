@@ -40,6 +40,10 @@ if (isset($_GET['id']) && isset($_GET['type'])) {
         $img_column = "image_file";
         $folder = "../../images/authors/"; 
     }
+    elseif ($type == 'courses') {
+        $img_column = "tech_image";
+        $folder = "../../images/technology_image/"; 
+    }
     elseif ($type == 'departments') {
     
     $res = mysqli_query($conn, "SELECT dept_icon, job_icon, exam_icon, head_image FROM departments WHERE id = '$id'");
