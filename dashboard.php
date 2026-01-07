@@ -92,6 +92,12 @@ $student_count = mysqli_num_rows(mysqli_query($conn, "SELECT id FROM students"))
         <?php include_once __DIR__."/core/tab/facilitie_data_table.php"; ?>
         <?php include_once __DIR__."/core/tab/technology_data_table.php"; ?>
         <?php include_once __DIR__."/core/tab/contact_data_table.php"; ?>
+        <?php include_once __DIR__."/core/tab/scholar_data_table.php"; ?>
+        <?php include_once __DIR__."/core/tab/admission_info_data_table.php"; ?>
+
+
+
+
 
     </div>
     <?php include_once __DIR__.'/core/dashboard_footer.php'; ?>

@@ -59,7 +59,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered text-center" width="100%" cellspacing="0">
+                <table class="table table-bordered text-left align-middle table-hover" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th class="">#ID</th>

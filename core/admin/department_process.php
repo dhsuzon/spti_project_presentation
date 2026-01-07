@@ -69,13 +69,13 @@ if (isset($_POST['save_dept'])) {
                     exam_system='$exam_system' $img_sql 
                     WHERE id='$dept_id'";
             
-            $_SESSION['dept_success'] = "Department updated successfully!";
+            $_SESSION['dept_update_mes'] = "Department updated successfully!";
         } else {
             
             $sql = "INSERT INTO departments (dept_name, head_name, head_email, head_contact, intro_text, job_sector, exam_system, dept_icon, job_icon, exam_icon, head_image, status) 
                     VALUES ('$dept_name', '$head_name', '$head_email', '$head_contact', '$intro_text', '$job_sector', '$exam_system', '$icon_new_name', '$job_icon_new_name', '$exam_icon_new_name', '$head_new_name', 1)";
             
-            $_SESSION['dept_success'] = "New department added!";
+            $_SESSION['dept_add_mes'] = "New department added!";
         }
 
         if (mysqli_query($conn, $sql)) {

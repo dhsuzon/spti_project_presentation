@@ -13,7 +13,7 @@ if (isset($_POST['save_settings'])) {
         
         $sql = "INSERT INTO conttact_us (inst_name, site_address, site_email, site_phone) 
                 VALUES ('$inst_name', '$address', '$email', '$phone')";
-        $_SESSION['settings_success'] = "Institute added successfully!";
+        $_SESSION['contact_add_success_mes'] = "Institute contact added successfully!";
     } else {
        
         $sql = "UPDATE conttact_us SET 
@@ -22,7 +22,7 @@ if (isset($_POST['save_settings'])) {
                 site_email = '$email', 
                 site_phone = '$phone' 
                 WHERE id = '$id'";
-        $_SESSION['settings_success'] = "Information updated successfully!";
+        $_SESSION['contact_update_success_mes'] = "Information updated successfully!";
     }
 
     if (mysqli_query($conn, $sql)) {

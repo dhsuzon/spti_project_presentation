@@ -288,4 +288,42 @@ $(document).ready(function () {
     $("#site_email").val($(this).data("email"));
     $("#site_phone").val($(this).data("phone"));
   });
+
+  // scholar info update and edit logic
+  $("#add_scholar_btn").on("click", function () {
+    $("#scholar_title").text("Add Institute Scholarships Information");
+    $("#scholar_btn").text("Save Scholar Info");
+
+    $("#scholarshirps_id").val("");
+    $("#scholarshirps_title").val("");
+    $("#scholarships_des").val("");
+  });
+
+  $(".edit_scholar").on("click", function () {
+    $("#scholar_title").text("Update Institute  Scholarships Information");
+    $("#scholar_btn").text("Update scholar  Info");
+
+    $("#scholarshirps_id").val($(this).data("scholar_id"));
+    $("#scholarshirps_title").val($(this).data("scholar_title"));
+    $("#scholarships_des").val($(this).data("scholar_des"));
+  });
+
+  // admission info update and edit logic
+  $("#add_admission_btn").on("click", function () {
+    $("#admission_title").text("Add Institute Admission Information");
+    $("#admission_btn").text("Save admission Info");
+
+    $("#admission_id").val("");
+    $("#admission_info_category").val("");
+    $("#admission_info_text").val("");
+  });
+
+  $(".edit_admission_btn").on("click", function () {
+    $("#admission_title").text("Update Institute  Admission Information");
+    $("#admission_btn").text("Update admission  Info");
+
+    $("#admission_id").val($(this).data("admission_id"));
+    $("#admission_info_category").val($(this).data("admission_category"));
+    $("#admission_info_text").val($(this).data("admission_info_text"));
+  });
 });

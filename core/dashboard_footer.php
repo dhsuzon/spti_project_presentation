@@ -619,6 +619,88 @@
 </div>
 
 
+<!-- scholarships info add or edit modal -->
+<div class="modal fade" id="scholarModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-white" id="modal_scholar_header" style="background-color:#264B5D">
+                <h5 class="modal-title" id="scholar_title">Add New scholarships Info</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="./core/admin/scholar_process.php" method="POST">
+                <input type="hidden" name="scholar_id" id="scholarshirps_id">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Scholar Title</label>
+                        <input type="text" name="scholar_title" id="scholarshirps_title" class="form-control" required
+                            maxlength="200">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Scholar Description</label>
+                        <textarea name="scholar_des" id="scholarships_des" class="form-control" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" name="save_scholar" id="scholar_btn" class="btn text-white"
+                        style="background-color:#264B5D">Save Scholar
+                        Info</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- admission info add or edit modal -->
+<div class="modal fade" id="admissionModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header text-white" id="modal_admission_header" style="background-color:#264B5D">
+                <h5 class="modal-title" id="admission_title"><i class="fas fa-plus-circle mr-2"></i> Add New Admission
+                    Info</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <form action="./core/admin/admission_process.php" method="POST">
+                <input type="hidden" name="admission_id" id="admission_id">
+
+                <div class="modal-body p-4">
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold"> Admission Category Role </label>
+                        <select name="admission_category" id="admission_info_category" class="form-control" required>
+                            <option value="">Select Category</option>
+                            <option value="header_title">Main Heading (প্রধান শিরোনাম)</option>
+                            <option value="header_desc">Main Description (প্রধান বর্ণনা)</option>
+                            <option value="eligibility">Eligibility (ভর্তির যোগ্যতা)</option>
+                            <option value="rules">Rules (ভর্তির নিয়মাবলী)</option>
+                            <option value="documents">Documents (প্রয়োজনীয় কাগজপত্র)</option>
+                        </select>
+                        <small class="text-muted">টাইটেল বা বর্ণনা আপডেট করতে চাইলে সংশ্লিষ্ট অপশনটি সিলেক্ট
+                            করুন।</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Admission Information</label>
+                        <textarea name="admission_info" id="admission_info_text" class="form-control" rows="5"
+                            placeholder="এখানে বিস্তারিত তথ্য লিখুন..." required></textarea>
+                    </div>
+                </div>
+
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" name="save_admission" id="admission_btn" class="btn text-white px-4"
+                        style="background-color:#264B5D">
+                        <i class="fas fa-save mr-1"></i> Save Information
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -31,7 +31,7 @@ if (isset($_POST['save_action'])) {
       
         $allowed_ext = array("jpg", "jpeg", "png", "webp");
         if (!in_array($file_ext, $allowed_ext)) {
-            $_SESSION['tech__format_error'] = "Invalid format! Only JPG, PNG & WEBP allowed.";
+            $_SESSION['tech_format_error'] = "Invalid format! Only JPG, PNG & WEBP allowed.";
             $upload_ok = false;
         }
 

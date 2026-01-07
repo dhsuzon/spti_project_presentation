@@ -12,7 +12,7 @@ require_once __DIR__."/config/db.php";
             <marquee scrollamount="7" scrolldelay="5" direction="left" onmouseover="this.stop()"
                 onmouseout="this.start()">
 
-                <a href="./admission.html" class="h4 text-decoration-none">
+                <a href="./admission.php" class="h4 text-decoration-none">
 
                     <i class="fas fa-angle-double-right"> </i> Admission is going on......</li>
                 </a>

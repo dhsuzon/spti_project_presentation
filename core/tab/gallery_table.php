@@ -60,7 +60,7 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered table-hover" id="bannerTable" width="100%" cellspacing="0">
+            <table class="table table-bordered table-hover align-middle" id="bannerTable" width="100%" cellspacing="0">
                 <thead class="bg-light text-dark">
                     <tr>
                         <th style="width: 5%;">id</th>
