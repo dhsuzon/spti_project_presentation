@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-6 ">
                     <div class="copyright">
-                        &copy; 2025 <a href="./index.html">Sylhet Professional Technical Institute</a>, All rights
+                        &copy; 2025 <a href="./index.php">Sylhet Professional Technical Institute</a>, All rights
                         reserved.
                     </div>
                 </div>

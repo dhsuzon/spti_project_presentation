@@ -3,14 +3,16 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in | SPTI site admin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./css/admin/login.css">
-   
+
 </head>
+
 <body class="light-theme">
 
     <div class="login-box">
@@ -23,11 +25,11 @@ session_start();
 
         <div class="login-body">
             <?php if(isset($_SESSION['login_error'])): ?>
-                <div class="error-msg">
-                    <?php echo $_SESSION['login_error']; 
+            <div class="error-msg">
+                <?php echo $_SESSION['login_error']; 
                     unset($_SESSION['login_error']);
                     ?>
-                </div>
+            </div>
             <?php endif; ?>
 
             <form action="./core/admin/login_process.php" method="POST">
@@ -51,4 +53,5 @@ session_start();
     <script src="./js/index.js"></script>
     </script>
 </body>
+
 </html>

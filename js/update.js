@@ -264,4 +264,28 @@ $(document).ready(function () {
 
     $("#tech_image").prop("required", false);
   });
+
+  // contact info update and edit logic
+
+  $("#add_contact_btn").on("click", function () {
+    $("#contact_title").text("Add Institute Contact Information");
+    $("#contact_btn").text("Save Contact Info");
+
+    $("#setting_id").val("");
+    $("#inst_name").val("");
+    $("#site_address").val("");
+    $("#site_email").val("");
+    $("#site_phone").val("");
+  });
+
+  $(".edit_contact").on("click", function () {
+    $("#contact_title").text("Update Institute  Contact Information");
+    $("#contact_btn").text("Update Contact  Info");
+
+    $("#setting_id").val($(this).data("id"));
+    $("#inst_name").val($(this).data("name"));
+    $("#site_address").val($(this).data("address"));
+    $("#site_email").val($(this).data("email"));
+    $("#site_phone").val($(this).data("phone"));
+  });
 });

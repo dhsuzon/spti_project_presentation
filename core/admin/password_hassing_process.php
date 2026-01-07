@@ -1,7 +1,7 @@
 <?php
 require_once '../../config/db.php'; 
 
-$plain_password = 'admin12345'; 
+$plain_password =$_ENV["ADMIN_PASS"]; 
 
 
 $hashed_password = password_hash($plain_password, PASSWORD_DEFAULT);

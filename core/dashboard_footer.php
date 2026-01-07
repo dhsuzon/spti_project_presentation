@@ -575,9 +575,48 @@
     </div>
 </div>
 
-
-
-
+<!-- contact info add or edit modal -->
+<div class="modal fade" id="settingsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-white" id="modal_header" style="background-color:#264B5D">
+                <h5 class="modal-title" id="contact_title">Add Institute Contact Info</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="./core/admin/contact_process.php" method="POST">
+                <input type="hidden" name="setting_id" id="setting_id">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Institute Name</label>
+                        <input type="text" name="inst_name" id="inst_name" class="form-control" required
+                            maxlength="200">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Address</label>
+                        <textarea name="site_address" id="site_address" class="form-control" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Email</label>
+                        <input type="email" name="site_email" id="site_email" class="form-control" required
+                            maxlength="255">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Phone</label>
+                        <input type="text" name="site_phone" id="site_phone" class="form-control" required
+                            maxlengtht="15" pattern="^[0-9+]{11,15}$"
+                            title="phone must be numeric and lenghtgatther than equal 11 or less than equal 15">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" name="save_settings" id="contact_btn" class="btn text-white"
+                        style="background-color:#264B5D">Save Contact
+                        Info</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 
