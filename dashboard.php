@@ -5,10 +5,7 @@ if (!isset($_SESSION['admin_user'])) {
     header("Location: ./login.php");
     exit();
 }
-?>
-<?php include_once __DIR__.'/core/dashboard_header.php'; ?>
-<?php
-
+include_once __DIR__.'/core/dashboard_header.php';
 $faculty_count = mysqli_num_rows(mysqli_query($conn, "SELECT id FROM teachers"));
 $student_count = mysqli_num_rows(mysqli_query($conn, "SELECT id FROM students"));
 ?>
