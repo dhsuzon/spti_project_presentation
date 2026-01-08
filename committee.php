@@ -54,7 +54,7 @@
             </div>
 
             <div class="col-md-6 col-ms-12">
-                <?php include_once __DIR__.'/core/contact.php'; ?>
+                <?php include_once __DIR__.'/core/contact_us.php'; ?>
 
             </div>
         </div>
