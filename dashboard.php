@@ -15,21 +15,28 @@ if (!isset($_SESSION['admin_user'])) {
 <?php include_once __DIR__.'/core/dashboard_header.php'; ?>
 <?php
 
-
-// Total Faculty/Teachers count
 $faculty_count = mysqli_num_rows(mysqli_query($conn, "SELECT id FROM teachers"));
 
-// Total Students count
 $student_count = mysqli_num_rows(mysqli_query($conn, "SELECT id FROM students"));
 ?>
 
 <div class="main-content">
-    <div class="top-bar d-flex justify-content-between align-items-center px-3 py-2 bg-white border-bottom shadow-sm">
+    <div
+        class="top-bar d-flex justify-content-space-between align-items-center px-3 py-2 bg-white border-bottom shadow-sm">
         <span>Welcome, <strong class="text-primary"><?php echo $_SESSION['admin_user']; ?></strong></span>
-        <a href="./core/admin/logout.php" class="btn btn-danger" onclick="return confirm('you are logout this system')">
-            <i class="fas fa-sign-out-alt"></i> Logout
-        </a>
+
+        <div class="flex">
+            <a href="./pass_update.php" class="btn btn-warning"
+                onclick="return confirm('you are sure change password or admin user this system')">
+                <i class="fas fa-sign-in-alt" target="_blank"></i> Change Admin info
+            </a>
+            <a href="./core/admin/logout.php" class="btn btn-danger"
+                onclick="return confirm('you are logout this system')">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
     </div>
+
 
     <div class="content-wrapper p-3 p-md-4">
         <h2 class="mb-4 text-dark font-weight-light text-center text-md-left">Site Administration</h2>

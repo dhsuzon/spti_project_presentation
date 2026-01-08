@@ -52,7 +52,6 @@
 
             <li class="menu-label" style="color: #ff8e8e;">DELETE / REMOVE</li>
             <li><a href="#"><i class="fas fa-trash-alt"></i> Delete Data</a></li>
-
             <li><a href="core/admin/logout.php" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </li>
         </ul>

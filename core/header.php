@@ -149,7 +149,7 @@ $dept_result = mysqli_query($conn,$dept_info);
                         <a class="nav-link nav-text_color" href="./notice.php">Notice</a>
                     </li>
 
-                    <a class="btn btn-outline-primary" href="./login.php">Admin Login</a>
+                    <a class="btn btn-outline-primary" href="./login.php" target="_blank">Admin Login</a>
                 </ul>
 
 
