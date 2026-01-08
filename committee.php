@@ -50,7 +50,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-sm-12">
-                <?php include_once __DIR__.'/core/useful_link.php'; ?>
+                <?php include_once __DIR__.'/core/usefull_link.php'; ?>
             </div>
 
             <div class="col-md-6 col-ms-12">
