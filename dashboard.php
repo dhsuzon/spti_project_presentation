@@ -1,9 +1,6 @@
 <?php
-ob_start();
 session_start();
 require_once './config/db.php';
-
-
 if (!isset($_SESSION['admin_user'])) {
     header("Location: ./login.php");
     exit();
