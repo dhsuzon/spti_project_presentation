@@ -1,14 +1,24 @@
 <?php
+ob_start();
 session_start();
 require_once './config/db.php';
+
+
 if (!isset($_SESSION['admin_user'])) {
     header("Location: ./login.php");
     exit();
 }
+
+
 include_once __DIR__.'/core/dashboard_header.php';
-$faculty_count = mysqli_num_rows(mysqli_query($conn, "SELECT id FROM teachers"));
-$student_count = mysqli_num_rows(mysqli_query($conn, "SELECT id FROM students"));
+
+$faculty_res = mysqli_query($conn, "SELECT id FROM teachers");
+$faculty_count = ($faculty_res) ? mysqli_num_rows($faculty_res) : 0;
+
+$student_res = mysqli_query($conn, "SELECT id FROM students");
+$student_count = ($student_res) ? mysqli_num_rows($student_res) : 0;
 ?>
+
 
 <div class="main-content">
     <div
